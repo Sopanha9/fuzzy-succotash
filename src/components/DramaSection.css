@@ -1,0 +1,104 @@
+.drama-section {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  letter-spacing: -0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 40%;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.scroll-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.scroll-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.scroll-btn:hover {
+  background: var(--surface-hover);
+  color: var(--accent);
+  box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.drama-scroller-wrapper {
+  position: relative;
+}
+
+.drama-scroller {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 1rem 0 2rem 0;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.drama-scroller::-webkit-scrollbar {
+  display: none;
+}
+.drama-scroller {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.drama-scroller > * {
+  scroll-snap-align: start;
+}
+
+/* Skeletons */
+.skeleton-card {
+  width: 200px;
+  height: 300px;
+  flex: 0 0 auto;
+  border-radius: 12px;
+  background: linear-gradient(90deg, var(--surface) 25%, var(--surface-hover) 50%, var(--surface) 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+.skeleton-text {
+  color: transparent !important;
+  background: linear-gradient(90deg, var(--surface) 25%, var(--surface-hover) 50%, var(--surface) 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 4px;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
