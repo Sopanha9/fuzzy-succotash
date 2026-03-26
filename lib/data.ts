@@ -77,13 +77,13 @@ export const MOVIES: Movie[] = [
   },
   {
     id: 7,
-    title: "All of Us Strangers",
+    title: "Spider-Man: Across the Spider-Verse",
     year: "2023",
     rating: 5,
     opinion:
-      "A ghost story about grief and queerness that broke me completely. Andrew Scott is extraordinary.",
-    genre: ["Romance", "Fantasy"],
+      "The peaks of animation. Every frame is a painting, and the story is as ambitious as the visuals.",
+    genre: ["Animation", "Action"],
     image:
-      "https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?q=80&w=1000&auto=format&fit=crop",
   },
 ];

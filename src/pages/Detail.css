@@ -1,0 +1,209 @@
+.detail-page {
+  padding-top: 2rem;
+}
+
+.back-btn {
+  margin-bottom: 2rem;
+  display: inline-flex;
+  padding: 0.5rem 1rem !important;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.back-btn:hover {
+  background: var(--surface-hover);
+  color: var(--accent);
+}
+
+.hero-detail {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  align-items: flex-start;
+}
+
+.poster-container {
+  flex: 0 0 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.poster-container img {
+  width: 100%;
+  display: block;
+}
+
+.info-container {
+  flex: 1;
+}
+
+.detail-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 99px;
+  background: rgba(14, 165, 233, 0.1);
+  color: var(--accent);
+  border-color: rgba(14, 165, 233, 0.2);
+}
+
+.meta-stats {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.introduction {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-bottom: 2.5rem;
+}
+
+.play-btn {
+  font-size: 1.1rem;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+}
+
+/* Episodes Grid */
+.episodes-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.episode-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1.5rem;
+}
+
+.episode-card {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.episode-card:hover {
+  background: var(--surface-hover);
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.ep-num {
+  font-size: 1.25rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.play-ep {
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.episode-card:hover .play-ep {
+  color: var(--accent);
+}
+
+.loading-episodes {
+  text-align: center;
+  margin: 3rem 0;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .hero-detail {
+    flex-direction: column;
+  }
+  .poster-container {
+    flex: 0 0 auto;
+    width: 60%;
+    margin: 0 auto;
+  }
+  .detail-title {
+    font-size: 2.2rem;
+  }
+}
+
+.player-section {
+  padding: 2rem;
+  margin-bottom: 4rem;
+  border-radius: 16px;
+  background: rgba(14, 165, 233, 0.05);
+  border: 1px solid var(--accent);
+  box-shadow: 0 0 30px var(--accent-glow);
+}
+
+.player-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.player-header h2 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.close-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 99px;
+  transition: all 0.2s;
+}
+
+.close-btn:hover {
+  background: var(--text-secondary);
+  color: #000;
+}
+
+.video-wrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+.drama-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  outline: none;
+}
+
+.active-ep {
+  border-color: var(--accent);
+  background: var(--surface-hover);
+  box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.active-ep .ep-num {
+  color: var(--accent);
+}
