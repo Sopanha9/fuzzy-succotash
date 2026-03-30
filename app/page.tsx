@@ -4,10 +4,12 @@ import { useState, useMemo } from "react";
 import { MOVIES } from "@/lib/data";
 import { MovieCard } from "@/components/MovieCard";
 import { Input } from "@/components/ui/input";
-import { Search, Clapperboard } from "lucide-react";
+import { Search, Clapperboard, Plus } from "lucide-react";
+import { RecommendModal } from "@/components/RecommendModal";
 
 export default function MoviePage() {
   const [query, setQuery] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const filtered = useMemo(() => {
     if (!query.trim()) return MOVIES;
@@ -52,21 +54,35 @@ export default function MoviePage() {
           </div>
 
           {/* Stats */}
-          <div className="flex gap-6 md:mb-2">
-            <div className="text-center">
-              <p className="text-3xl font-black text-white">{MOVIES.length}</p>
-              <p className="text-xs text-zinc-500 uppercase tracking-widest mt-1">
-                Watched
-              </p>
+          <div className="flex flex-col sm:flex-row items-end gap-6 md:mb-2">
+            <div className="flex items-center gap-6">
+              <div className="text-center">
+                <p className="text-3xl font-black text-white">{MOVIES.length}</p>
+                <p className="text-xs text-zinc-500 uppercase tracking-widest mt-1">
+                  Watched
+                </p>
+              </div>
+              <div className="w-px h-12 bg-white/10" />
+              <div className="text-center">
+                <p className="text-3xl font-black text-emerald-400">
+                  {avgRating.toFixed(1)}
+                </p>
+                <p className="text-xs text-zinc-500 uppercase tracking-widest mt-1">
+                  Avg Rating
+                </p>
+              </div>
             </div>
-            <div className="w-px bg-white/10" />
-            <div className="text-center">
-              <p className="text-3xl font-black text-emerald-400">
-                {avgRating.toFixed(1)}
-              </p>
-              <p className="text-xs text-zinc-500 uppercase tracking-widest mt-1">
-                Avg Rating
-              </p>
+            
+            <div className="hidden sm:block w-px h-12 bg-white/10" />
+            
+            <div className="flex-shrink-0 w-full sm:w-auto mt-4 sm:mt-0">
+               <button 
+                  onClick={() => setIsModalOpen(true)}
+                  className="w-full sm:w-auto flex items-center justify-center gap-2 bg-zinc-800/50 hover:bg-zinc-800 text-white px-5 py-3 rounded-xl border border-white/5 transition-colors text-sm font-medium group"
+                >
+                  <Plus className="w-4 h-4 text-emerald-400 group-hover:rotate-90 transition-transform duration-300" />
+                  Recommend <span className="hidden sm:inline">a Movie</span>
+                </button>
             </div>
           </div>
         </header>
@@ -112,6 +128,8 @@ export default function MoviePage() {
           <p>© {new Date().getFullYear()} — Your personal cinema journal</p>
         </footer>
       </div>
+
+      <RecommendModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </main>
   );
 }
