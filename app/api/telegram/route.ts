@@ -23,7 +23,7 @@ export async function POST(request: Request) {
     let url = "";
     
     // We use FormData to natively support file uploading to Telegram via multipart/form-data
-    let payload = new FormData();
+    const payload = new FormData();
     payload.append("chat_id", chatId);
     payload.append("parse_mode", "HTML");
 
