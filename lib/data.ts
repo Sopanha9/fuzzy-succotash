@@ -162,4 +162,15 @@ export const MOVIES: Movie[] = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGOnL9G5Bx6q6vw2ToNKpZLCsaKB_ZA1ZsmJLXDc-SfX04RUQXjiFEccEaLoxxWRIkL4Ct&s=10",
   },
+  {
+    id: 15,
+    title: "Get out",
+    year: "2010",
+    rating: 8,
+    opinion:
+      "A gripping psychological thriller that keeps you guessing until the very end, with a haunting atmosphere and a powerful performance by Leonardo DiCaprio.",
+    genre: ["Drama", "Romance"],
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6Hr-ZNlOyGfWOED_cHogpEHYv7-H4OZSy3nWlA2MvwbXivNdhkGWgWhScOenoRkknOMhm&s=10",
+  },
 ];
