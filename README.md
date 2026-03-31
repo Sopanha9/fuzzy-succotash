@@ -1,16 +1,87 @@
-# React + Vite
+# fuzzy-succotash
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun personal web project built with JavaScript & Node.js — made just for the joy of building it.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Features
 
-## React Compiler
+-  Built with vanilla JavaScript / Node.js — no unnecessary bloat
+-  Frontend web interface — runs right in the browser
+-  Personal playground — experimental, evolving, and unapologetically fun
+-  Lightweight and easy to run locally
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📸 Screenshots / Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+> _Add a screenshot or screen recording of your app here!_
+>
+> You can drag and drop an image into this section, or link to a hosted demo:
+>
+> ```
+> ![App Screenshot](./screenshots/demo.png)
+> ```
+>
+> Or for a live demo:
+> ```
+> 🔗 [Live Demo](https://your-demo-link.com)
+> ```
+
+---
+
+##  Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18+ recommended)
+
+### Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/Sopanha9/fuzzy-succotash.git
+
+# Navigate into the project
+cd fuzzy-succotash
+
+# Install dependencies
+npm install
+```
+
+### Run Locally
+
+```bash
+npm start
+```
+
+Then open your browser and go to `http://localhost:3000`
+
+---
+
+##  Project Structure
+
+```
+fuzzy-succotash/
+├── public/         # Static assets (HTML, CSS, images)
+├── src/            # JavaScript source files
+├── package.json    # Project dependencies & scripts
+└── README.md       # You are here!
+```
+
+---
+
+##  Notes
+
+This project is built purely for fun and personal exploration. No production promises — just vibes. 😄
+
+---
+
+## 👤 Author
+
+**Sopanha**
+- GitHub: [@Sopanha9](https://github.com/Sopanha9)
+
+---
+
+> *"fuzzy-succotash" — because the best projects start with a random name and a curious mind.*
