@@ -1,15 +1,15 @@
-# 🌽 fuzzy-succotash
+# fuzzy-succotash
 
 A fun personal web project built with JavaScript & Node.js — made just for the joy of building it.
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🚀 Built with vanilla JavaScript / Node.js — no unnecessary bloat
-- 🎨 Frontend web interface — runs right in the browser
-- 🛠️ Personal playground — experimental, evolving, and unapologetically fun
-- 💡 Lightweight and easy to run locally
+-  Built with vanilla JavaScript / Node.js — no unnecessary bloat
+-  Frontend web interface — runs right in the browser
+-  Personal playground — experimental, evolving, and unapologetically fun
+-  Lightweight and easy to run locally
 
 ---
 
@@ -30,7 +30,7 @@ A fun personal web project built with JavaScript & Node.js — made just for the
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -59,7 +59,7 @@ Then open your browser and go to `http://localhost:3000`
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 fuzzy-succotash/
@@ -71,7 +71,7 @@ fuzzy-succotash/
 
 ---
 
-## 📝 Notes
+##  Notes
 
 This project is built purely for fun and personal exploration. No production promises — just vibes. 😄
 
