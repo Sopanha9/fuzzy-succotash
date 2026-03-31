@@ -129,4 +129,15 @@ export const MOVIES: Movie[] = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNI2SBzYW95C8Wo7zYV3bzVzem58xPnUzsZGLsnLg17mSMgR574acQZpgNK7a5XeF3THjqgQ&s=10",
   },
+  {
+    id: 12,
+    title: "The truman show",
+    year: "1998",
+    rating: 8,
+    opinion:
+      "A thought-provoking and emotionally resonant film that explores themes of reality, identity, and the human desire for freedom.",
+    genre: ["Drama", "Romance"],
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLIpdWXXfROSBGNXcGzL-2Uv8ZV7grzKQxDjL-J9N37zReEj2mlH0qg60TfcerD-T4X8ok&s=10",
+  },
 ];
