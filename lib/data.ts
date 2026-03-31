@@ -140,4 +140,15 @@ export const MOVIES: Movie[] = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLIpdWXXfROSBGNXcGzL-2Uv8ZV7grzKQxDjL-J9N37zReEj2mlH0qg60TfcerD-T4X8ok&s=10",
   },
+  {
+    id: 13,
+    title: "Shutter island",
+    year: "2010",
+    rating: 8,
+    opinion:
+      "A gripping psychological thriller that keeps you guessing until the very end, with a haunting atmosphere and a powerful performance by Leonardo DiCaprio.",
+    genre: ["Drama", "Romance"],
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWaASGt5HkTiOySkGsHTkXv4l_SCqlgCdpiCMbai76YykQMsJNGbobjcea6jWH-wvqVE9XGw&s=10",
+  },
 ];
