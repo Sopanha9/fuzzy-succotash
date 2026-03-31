@@ -118,4 +118,15 @@ export const MOVIES: Movie[] = [
     image:
       "https://f.woowoowoowoo.net/resize/250x400/f6/57/f657c4e4460cb59fdaca16c2474e9765/f657c4e4460cb59fdaca16c2474e9765.jpg",
   },
+  {
+    id: 11,
+    title: "Forrest Gump",
+    year: "1994",
+    rating: 8,
+    opinion:
+      "A heartwarming and inspiring tale of a simple man with a big heart, navigating through the complexities of life and love.",
+    genre: ["Drama", "Romance"],
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNI2SBzYW95C8Wo7zYV3bzVzem58xPnUzsZGLsnLg17mSMgR574acQZpgNK7a5XeF3THjqgQ&s=10",
+  },
 ];
