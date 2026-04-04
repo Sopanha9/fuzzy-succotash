@@ -44,15 +44,14 @@ export const MOVIES: Movie[] = [
   },
   {
     id: 4,
-    title: "Prey",
-    year: "2022",
-    rating: 5,
+    title: "Good Will Hunting",
+    year: "1997",
+    rating: 9,
     opinion:
-      "On the Great Plains in 1719, Naru, a fierce and highly skilled Comanche warrior, sets out to protect her people when a unknown danger threatens them. But the prey she’s stalking turns out to be a highly evolved alien predator with a technically advanced arsenal. ",
-    genre: ["Action", "Sci-Fi"],
+      "Will Hunting, a janitor at MIT, has a genius-level IQ but struggles with personal demons. When he solves a complex math problem, he catches the eye of a psychology professor who tries to help him confront his past and unlock his true potential. A powerful story about friendship, love, and the courage to face one's fears.",
+    genre: ["Drama"],
     image:
-      "https://f.woowoowoowoo.net/resize/250x400/18/13/18131c76c6ad22fbb35bc6bf6dee5b3e/18131c76c6ad22fbb35bc6bf6dee5b3e.jpg",
-  },
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG4ngcb251BWcV9EGK9UK3iDsI1cefjllocQjRkJExV9v_MW7FIScJkWYVzlovKTronoAu7g&s=10"},
   {
     id: 5,
     title: "Prisoners",
@@ -107,17 +106,7 @@ export const MOVIES: Movie[] = [
     image:
       "https://f.woowoowoowoo.net/resize/250x400/e2/e2/e2e23dfa07a9e20bbc9597a33b2622e2/e2e23dfa07a9e20bbc9597a33b2622e2.jpg",
   },
-  {
-    id: 10,
-    title: "28 days later",
-    year: "2002",
-    rating: 6,
-    opinion:
-      "A group of animal rights activists break into a laboratory and release chimpanzees that have been infected with a highly contagious and aggressive virus, which causes infected individuals to fly into a murderous rage. ",
-    genre: ["Horror", "Drama"],
-    image:
-      "https://f.woowoowoowoo.net/resize/250x400/f6/57/f657c4e4460cb59fdaca16c2474e9765/f657c4e4460cb59fdaca16c2474e9765.jpg",
-  },
+
   {
     id: 11,
     title: "Forrest Gump",
