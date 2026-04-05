@@ -11,36 +11,36 @@ export interface Movie {
 export const MOVIES: Movie[] = [
   {
     id: 1,
-    title: "Dune: Part Two",
-    year: "2024",
-    rating: 9,
+    title: "The Revenant",
+    year: "2015",
+    rating: 7,
     opinion:
-      "A cinematic masterpiece. The sound design and scale are unmatched in modern sci-fi.",
-    genre: ["Sci-Fi", "Adventure"],
+      "In the harsh wilderness of 1820s America, frontiersman Hugh Glass is mauled by a grizzly bear and left for dead by his own hunting team. Driven by a thirst for revenge, Glass embarks on an epic journey of survival, battling the elements, hostile tribes, and his own inner demons to reclaim his life and avenge the betrayal that nearly cost him everything.",
+    genre: ["Adventure", "Drama"],
     image:
-      "https://image.tmdb.org/t/p/w500/6izwz7rsy95ARzTR3poZ8H6c5pp.jpg",
+      "https://m.media-amazon.com/images/M/MV5BYTgwNmQzZDctMjNmOS00OTExLTkwM2UtNzJmOTJhODFjOTdlXkEyXkFqcGc@._V1_.jpg",
   },
   {
     id: 2,
-    title: "Cyberpunk: Edgerunners",
-    year: "2022",
-    rating: 9,
+    title: "Tenet",
+    year: "2020",
+    rating: 7,
     opinion:
-      "In the neon-drenched chaos of Night City, David Martinez, a street kid, fights to survive in a world of cybernetic enhancements and corporate greed. A thrilling and emotional journey of ambition, loss, and the true meaning of humanity.",
-    genre: ["Action", "Drama"],
+      "A secret agent embarks on a dangerous mission to prevent World War III by manipulating the flow of time.",
+    genre: ["Action", "Sci-Fi"],
     image:
-      "https://f.woowoowoowoo.net/resize/250x400/7d/b0/7db02264214ae01ae9bb262b48760dd2/7db02264214ae01ae9bb262b48760dd2.jpg",
+      "https://m.media-amazon.com/images/M/MV5BNTIzNDIxMzktMzlkMi00MmUyLWFmMjQtZDgwMjBmOGJmNTI3XkEyXkFqcGc@._V1_.jpg",
   },
   {
     id: 3,
-    title: "Oppenheimer",
-    year: "2023",
-    rating: 5,
+    title: "The lord of the rings: The return of the king",
+    year: "2003",
+    rating: 10,
     opinion:
-      "Nolan at his peak. A film that demands to be seen on the largest screen possible. Cillian Murphy is transcendent.",
+      "The epic conclusion to the Lord of the Rings trilogy, The Return of the King, is a cinematic masterpiece that delivers a powerful and emotional story of courage, sacrifice, and the triumph of good over evil. With stunning visuals, breathtaking action sequences, and a heartfelt story, this film is a must-watch for any fantasy lover.",
     genre: ["Drama", "History"],
     image:
-      "https://f.woowoowoowoo.net/resize/250x400/b5/6a/b56a5aee9715743bb34b728e52b6bea0/b56a5aee9715743bb34b728e52b6bea0.jpg",
+      "https://m.media-amazon.com/images/M/MV5BMTZkMjBjNWMtZGI5OC00MGU0LTk4ZTItODg2NWM3NTVmNWQ4XkEyXkFqcGc@._V1_.jpg",
   },
   {
     id: 4,
