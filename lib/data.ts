@@ -162,4 +162,26 @@ export const MOVIES: Movie[] = [
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6Hr-ZNlOyGfWOED_cHogpEHYv7-H4OZSy3nWlA2MvwbXivNdhkGWgWhScOenoRkknOMhm&s=10",
   },
+  {
+    id: 16,
+    title: "Avatar: Fire and Ash",
+    year: "2026",
+    rating: 9,
+    opinion:
+      "Set years after the events of Avatar: The Way of Water, Jake Sully and Neytiri have established a new life for their family among the Metkayina clan. However, their peaceful existence is shattered when the RDA returns to Pandora with a new, more destructive agenda. As the Na'vi face a renewed threat to their home and their way of life, Jake must rally the clans together once more to fight for their freedom and protect Pandora from the encroaching forces of humanity.",
+    genre: ["Action", "Adventure", "Fantasy"],
+    image:
+      "https://m.media-amazon.com/images/M/MV5BZDYxY2I1OGMtN2Y4MS00ZmU1LTgyNDAtODA0MzAyYjI0N2Y2XkEyXkFqcGc@._V1_.jpg",
+  },
+  {
+    id: 17,
+    title: "Project Hail Mary",
+    year: "2026",
+    rating: 9,
+    opinion:
+      "Ryland Grace is the sole survivor on a desperate, last-chance mission to save Earth from an extinction-level threat. He awakens from a coma with no memory of his name, his mission, or his surroundings. As he pieces together the puzzle of his past, he must race against time to solve the scientific mystery that threatens the future of humanity.",
+    genre: ["Sci-Fi", "Adventure", "Drama"],
+    image:
+      "https://f.woowoowoowoo.net/resize/250x400/57/8e/578ebcc11b13b8f9ddeb7f37f4ff1aac/578ebcc11b13b8f9ddeb7f37f4ff1aac.jpg",
+  },
 ];
