@@ -166,7 +166,7 @@ export const MOVIES: Movie[] = [
     id: 16,
     title: "Avatar: Fire and Ash",
     year: "2026",
-    rating: 9,
+    rating: 10,
     opinion:
       "Set years after the events of Avatar: The Way of Water, Jake Sully and Neytiri have established a new life for their family among the Metkayina clan. However, their peaceful existence is shattered when the RDA returns to Pandora with a new, more destructive agenda. As the Na'vi face a renewed threat to their home and their way of life, Jake must rally the clans together once more to fight for their freedom and protect Pandora from the encroaching forces of humanity.",
     genre: ["Action", "Adventure", "Fantasy"],
