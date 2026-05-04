@@ -184,4 +184,26 @@ export const MOVIES: Movie[] = [
     image:
       "https://f.woowoowoowoo.net/resize/250x400/57/8e/578ebcc11b13b8f9ddeb7f37f4ff1aac/578ebcc11b13b8f9ddeb7f37f4ff1aac.jpg",
   },
+  {
+    id: 18,
+    title: "Invincible (All seasons)",
+    year: "2021", 
+    rating: 9,
+    opinion:
+      "Mark Grayson is a normal teenager whose father is the most powerful superhero on the planet, Omni-Man. But when his father's legacy turns out to be more sinister than he ever imagined, Mark must forge his own path and live up to his father's name in a world that needs a new kind of hero.",
+    genre: ["Action", "Adventure", "Drama"],
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg3spp4KYbkITHL6krOqcaJYNvvY70Q9pq0xgGXJNNRKysXHf8y-ZvTffzcTuBewpKRdnd&s=10",
+  },
+  {
+    id: 19,
+    title: "The Boys Season 5",
+    year: "2026",
+    rating: 10,
+    opinion:
+      "In a world where superpowered individuals (known as 'Supes') are widely idolized, a group of vigilantes known as The Boys work to hold these corrupt heroes accountable for their negligent and often destructive actions.",
+    genre: ["Action", "Adventure", "Drama"],
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ71_ESBbUZEFgNSG6sQ7e0Nzz5ukfBbnKUgpFoAVtsjjTJ3vsG",
+  },
 ];
