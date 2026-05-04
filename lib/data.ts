@@ -51,7 +51,8 @@ export const MOVIES: Movie[] = [
       "Will Hunting, a janitor at MIT, has a genius-level IQ but struggles with personal demons. When he solves a complex math problem, he catches the eye of a psychology professor who tries to help him confront his past and unlock his true potential. A powerful story about friendship, love, and the courage to face one's fears.",
     genre: ["Drama"],
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG4ngcb251BWcV9EGK9UK3iDsI1cefjllocQjRkJExV9v_MW7FIScJkWYVzlovKTronoAu7g&s=10"},
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG4ngcb251BWcV9EGK9UK3iDsI1cefjllocQjRkJExV9v_MW7FIScJkWYVzlovKTronoAu7g&s=10",
+  },
   {
     id: 5,
     title: "Prisoners",
@@ -60,7 +61,8 @@ export const MOVIES: Movie[] = [
     opinion:
       "A gripping and atmospheric thriller that keeps you on the edge of your seat until the very end. Hugh Jackman delivers a powerful performance as a desperate father.",
     genre: ["Thriller", "Drama"],
-    image:"https://i.pinimg.com/1200x/22/57/3f/22573f79568bd15b7fb55f01829c6ab2.jpg"
+    image:
+      "https://i.pinimg.com/1200x/22/57/3f/22573f79568bd15b7fb55f01829c6ab2.jpg",
   },
   {
     id: 6,
@@ -91,7 +93,7 @@ export const MOVIES: Movie[] = [
     rating: 6,
     opinion:
       "Phillip is a wealthy quadriplegic who needs a caretaker to help him with his day-to-day routine in his New York penthouse. He decides to hire Dell, a struggling parolee who's trying to reconnect with his ex and his young son. Despite coming from two different worlds, an unlikely friendship starts to blossom. ",
-    genre: ["Comedy","Music", "Drama"],
+    genre: ["Comedy", "Music", "Drama"],
     image:
       "https://f.woowoowoowoo.net/resize/250x400/1a/9b/1a9b4c075c6b478e5d42c95e8d34df0c/1a9b4c075c6b478e5d42c95e8d34df0c.jpg",
   },
@@ -187,7 +189,7 @@ export const MOVIES: Movie[] = [
   {
     id: 18,
     title: "Invincible (All seasons)",
-    year: "2021", 
+    year: "2021",
     rating: 9,
     opinion:
       "Mark Grayson is a normal teenager whose father is the most powerful superhero on the planet, Omni-Man. But when his father's legacy turns out to be more sinister than he ever imagined, Mark must forge his own path and live up to his father's name in a world that needs a new kind of hero.",
@@ -202,6 +204,17 @@ export const MOVIES: Movie[] = [
     rating: 10,
     opinion:
       "In a world where superpowered individuals (known as 'Supes') are widely idolized, a group of vigilantes known as The Boys work to hold these corrupt heroes accountable for their negligent and often destructive actions.",
+    genre: ["Action", "Adventure", "Drama"],
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ71_ESBbUZEFgNSG6sQ7e0Nzz5ukfBbnKUgpFoAVtsjjTJ3vsG",
+  },
+  {
+    id: 20,
+    title: "Lucifer",
+    year: "2026",
+    rating: 10,
+    opinion:
+      "Lucifer is a dark fantasy series that follows the story of Lucifer Morningstar, a young man who is cast out of his family and taken in by the Devil's daughter, Penny. As Lucifer struggles to find his place in the world and rebuild his faith, he becomes embroiled in a web of corruption and supernatural forces.",
     genre: ["Action", "Adventure", "Drama"],
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ71_ESBbUZEFgNSG6sQ7e0Nzz5ukfBbnKUgpFoAVtsjjTJ3vsG",
