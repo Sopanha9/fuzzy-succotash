@@ -211,12 +211,12 @@ export const MOVIES: Movie[] = [
   {
     id: 20,
     title: "Lucifer",
-    year: "2026",
+    year: "2016",
     rating: 10,
     opinion:
       "Lucifer is a dark fantasy series that follows the story of Lucifer Morningstar, a young man who is cast out of his family and taken in by the Devil's daughter, Penny. As Lucifer struggles to find his place in the world and rebuild his faith, he becomes embroiled in a web of corruption and supernatural forces.",
     genre: ["Action", "Adventure", "Drama"],
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ71_ESBbUZEFgNSG6sQ7e0Nzz5ukfBbnKUgpFoAVtsjjTJ3vsG",
+      "https://static0.colliderimages.com/wordpress/wp-content/uploads/2021/05/lucifer-s6.jpg?w=1200&h=675&fit=crop",
   },
 ];
