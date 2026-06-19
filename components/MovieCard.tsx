@@ -1,90 +1,44 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
-import { Star, X, Info } from "lucide-react";
+import { Star, Info } from "lucide-react";
 import { Movie } from "@/lib/data";
+import { DetailModal } from "@/components/DetailModal";
 
-export function MovieCard({ movie }: { movie: Movie }) {
+export function MovieCard({ movie, index = 0 }: { movie: Movie; index?: number }) {
   const [expanded, setExpanded] = useState(false);
   const [hovered, setHovered] = useState(false);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const t = setTimeout(() => setVisible(true), 120 + index * 50);
+    return () => clearTimeout(t);
+  }, [index]);
+
+  // Rating-based accent color
+  const ratingColor =
+    movie.rating >= 9
+      ? "text-emerald-400"
+      : movie.rating >= 7
+      ? "text-lime-400"
+      : movie.rating >= 5
+      ? "text-amber-400"
+      : "text-orange-400";
 
   return (
     <>
       {/* ── Detail Modal ── */}
-      {expanded && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md"
-          onClick={() => setExpanded(false)}
-        >
-          <div
-            className="relative w-full max-w-md rounded-2xl bg-zinc-900/95 border border-white/10 shadow-2xl overflow-hidden"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Poster in modal */}
-            <div className="relative w-full aspect-[2/3]">
-              <Image
-                src={movie.image}
-                alt={movie.title}
-                fill
-                className="object-cover object-center"
-                sizes="448px"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/20 to-transparent" />
-
-              {/* Close */}
-              <button
-                onClick={() => setExpanded(false)}
-                className="absolute top-3 right-3 p-1.5 rounded-full bg-black/60 text-white hover:bg-black/90 transition-colors border border-white/10"
-              >
-                <X className="w-4 h-4" />
-              </button>
-
-              {/* Year badge */}
-              <div className="absolute top-3 left-3">
-                <Badge className="bg-emerald-500 text-black font-bold text-[10px] uppercase tracking-wider px-2 py-1">
-                  {movie.year}
-                </Badge>
-              </div>
-            </div>
-
-            {/* Info */}
-            <div className="p-5">
-              <div className="flex justify-between items-start gap-3 mb-3">
-                <h2 className="text-xl font-black tracking-tight text-white leading-tight">
-                  {movie.title}
-                </h2>
-                <div className="flex items-center gap-1.5 shrink-0 bg-emerald-500/20 px-2.5 py-1 rounded-full border border-emerald-500/30">
-                  <Star className="w-3.5 h-3.5 fill-emerald-400 text-emerald-400" />
-                  <span className="text-emerald-400 font-bold text-sm">
-                    {movie.rating}/5
-                  </span>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-1.5 mb-4">
-                {movie.genre.map((g) => (
-                  <span
-                    key={g}
-                    className="text-[10px] uppercase tracking-widest text-zinc-400 bg-zinc-800 px-2 py-0.5 rounded-md border border-zinc-700"
-                  >
-                    {g}
-                  </span>
-                ))}
-              </div>
-
-              <p className="text-zinc-300 text-sm italic leading-relaxed border-l-2 border-emerald-500/50 pl-3">
-                &ldquo;{movie.opinion}&rdquo;
-              </p>
-            </div>
-          </div>
-        </div>
-      )}
+      <DetailModal movie={expanded ? movie : null} onClose={() => setExpanded(false)} />
 
       {/* ── Poster Card ── */}
       <div
-        className="relative group cursor-pointer rounded-xl overflow-hidden aspect-[2/3] shadow-lg"
+        className={`relative group cursor-pointer rounded-xl overflow-hidden aspect-[2/3] shadow-lg transition-all duration-700 ${
+          visible
+            ? "opacity-100 translate-y-0 scale-100"
+            : "opacity-0 translate-y-8 scale-95"
+        }`}
         onClick={() => setExpanded(true)}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -112,8 +66,8 @@ export function MovieCard({ movie }: { movie: Movie }) {
 
         {/* Rating top-left */}
         <div className="absolute top-2 left-2 flex items-center gap-1 bg-black/60 backdrop-blur-sm px-2 py-1 rounded-full border border-white/10">
-          <Star className="w-3 h-3 fill-emerald-400 text-emerald-400" />
-          <span className="text-emerald-400 text-[11px] font-bold">
+          <Star className={`w-3 h-3 fill-current ${ratingColor}`} />
+          <span className={`${ratingColor} text-[11px] font-bold`}>
             {movie.rating}/10
           </span>
         </div>

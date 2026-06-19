@@ -3,6 +3,9 @@
 import { useState, useMemo } from "react";
 import { MOVIES } from "@/lib/data";
 import { MovieCard } from "@/components/MovieCard";
+import { Hero } from "@/components/Hero";
+import { DetailModal } from "@/components/DetailModal";
+import { GenreGroup } from "@/components/GenreGroup";
 import { Input } from "@/components/ui/input";
 import { Search, Clapperboard, Plus } from "lucide-react";
 import { RecommendModal } from "@/components/RecommendModal";
@@ -10,6 +13,17 @@ import { RecommendModal } from "@/components/RecommendModal";
 export default function MoviePage() {
   const [query, setQuery] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [spotlightExpanded, setSpotlightExpanded] = useState(false);
+
+  // Spotlight = highest rated, ties broken by most recent year
+  const spotlight = useMemo(
+    () =>
+      [...MOVIES].sort((a, b) => {
+        if (b.rating !== a.rating) return b.rating - a.rating;
+        return parseInt(b.year) - parseInt(a.year);
+      })[0],
+    []
+  );
 
   const filtered = useMemo(() => {
     if (!query.trim()) return MOVIES;
@@ -22,8 +36,26 @@ export default function MoviePage() {
     );
   }, [query]);
 
-  const avgRating =
-    MOVIES.reduce((acc, m) => acc + m.rating, 0) / MOVIES.length;
+  const avgRating = useMemo(
+    () => MOVIES.reduce((acc, m) => acc + m.rating, 0) / MOVIES.length,
+    []
+  );
+
+  // Group movies by broad category (Western, C-Drama, K-Drama, Anime, Animation)
+  const categoryGroups = useMemo(() => {
+    const order = ["Western", "C-Drama", "K-Drama", "Anime", "Animation"];
+    const map = new Map<string, typeof MOVIES>();
+    for (const movie of MOVIES) {
+      if (!map.has(movie.category)) map.set(movie.category, []);
+      map.get(movie.category)!.push(movie);
+    }
+    return order
+      .filter((cat) => map.has(cat))
+      .map((cat) => ({
+        category: cat,
+        movies: map.get(cat)!.sort((a, b) => b.rating - a.rating),
+      }));
+  }, []);
 
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-white p-6 md:p-12 relative overflow-hidden">
@@ -33,6 +65,14 @@ export default function MoviePage() {
       <div className="absolute top-[40%] right-[20%] w-[20%] h-[20%] bg-emerald-900/10 blur-[100px] rounded-full pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10">
+        {/* Hero Spotlight — hidden when searching */}
+        {!query.trim() && (
+          <Hero
+            movie={spotlight}
+            onOpen={() => setSpotlightExpanded(true)}
+          />
+        )}
+
         {/* Header */}
         <header className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div>
@@ -107,18 +147,42 @@ export default function MoviePage() {
           </p>
         )}
 
-        {/* Grid */}
-        {filtered.length > 0 ? (
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-            {filtered.map((movie) => (
-              <MovieCard key={movie.id} movie={movie} />
-            ))}
+        {/* Grid label */}
+        {!query.trim() && (
+          <div className="flex items-center gap-3 mb-6">
+            <h2 className="text-sm uppercase tracking-[0.3em] text-zinc-500 font-medium">
+              Browse by Category
+            </h2>
+            <div className="flex-1 h-px bg-white/5" />
+            <span className="text-xs text-zinc-600">{categoryGroups.length} categories</span>
           </div>
+        )}
+
+        {/* Category dropdowns (default view) or flat grid (search results) */}
+        {query.trim() ? (
+          filtered.length > 0 ? (
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+              {filtered.map((movie, i) => (
+                <MovieCard key={movie.id} movie={movie} index={i} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-24 text-zinc-700">
+              <p className="text-6xl mb-4">🎬</p>
+              <p className="text-lg font-medium">No films found</p>
+              <p className="text-sm mt-1">Try a different search term</p>
+            </div>
+          )
         ) : (
-          <div className="text-center py-24 text-zinc-700">
-            <p className="text-6xl mb-4">🎬</p>
-            <p className="text-lg font-medium">No films found</p>
-            <p className="text-sm mt-1">Try a different search term</p>
+          <div>
+            {categoryGroups.map((group, i) => (
+              <GenreGroup
+                key={group.category}
+                genre={group.category}
+                movies={group.movies}
+                defaultOpen={i === 0}
+              />
+            ))}
           </div>
         )}
 
@@ -130,6 +194,12 @@ export default function MoviePage() {
       </div>
 
       <RecommendModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+
+      {/* Spotlight detail modal — controlled by Hero "View Details" */}
+      <DetailModal
+        movie={spotlightExpanded ? spotlight : null}
+        onClose={() => setSpotlightExpanded(false)}
+      />
     </main>
   );
 }
