@@ -361,4 +361,18 @@ export const MOVIES: Movie[] = [
       "https://media.themoviedb.org/t/p/w500/fMECSPrTmRClSViMsXFYmiYIcWP.jpg",
     category: "K-Drama",
   },
+  {
+    id: 27,
+    title: "Love Like the Galaxy",
+    year: "2022",
+    rating: 7,
+    opinion:
+      "Cheng Shaoshang, left behind by her parents who went off to war, faces challenges from a scheming aunt and struggles with estrangement from her family. Lacking love and security, she is cautious in choosing a marriage partner and meets three suitors: Ling Buyi, the emperor's adopted son; Yuan Shen, a talented figure from Bailu Mountain; and Lou Yao, an aristocrat. Despite a rocky path to love, Shaoshang remains steadfast. Her involvement with Ling Buyi leads them into a mystery surrounding his family and identity and together they confront a national crisis, growing through their experiences and upholding their ideals.",
+    myReview:
+      "A solid historical romance with great production value. Zhao Lusi brings charm and fire to Shaoshang — her resilience is the heart of the show. The political intrigue and family mystery give it weight beyond a typical romance. Ling Buyi and Shaoshang's love story is compelling but the middle stretch drags a bit. Enjoyable but not a standout — a 7.",
+    genre: ["Drama", "Romance"],
+    image:
+      "https://image.tmdb.org/t/p/w500/yrFtRnriHMa4qOkAuXzo7jcXQmp.jpg",
+    category: "C-Drama",
+  },
 ];
